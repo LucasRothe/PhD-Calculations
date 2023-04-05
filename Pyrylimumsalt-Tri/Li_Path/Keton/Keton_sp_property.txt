@@ -1,0 +1,118 @@
+-------------------------------------------------------------
+----------------------- !PROPERTIES! ------------------------
+-------------------------------------------------------------
+# -----------------------------------------------------------
+$ PAL_Flags
+   description: The PAL Flags
+   geom. index: 1
+   prop. index: 1
+        Diskflag:     2
+# -----------------------------------------------------------
+$ SCF_Energy
+   description: The SCF energy
+   geom. index: 1
+   prop. index: 1
+        SCF Energy:     -500.2706819822
+# -----------------------------------------------------------
+$ DFT_Energy
+   description: The DFT energy
+   geom. index: 1
+   prop. index: 1
+   Number of Alpha Electrons                 40.0000523442 
+   Number of Beta  Electrons                 40.0000523442 
+   Total number of  Electrons                80.0001046885 
+   Exchange energy                          -48.9726278870 
+   Correlation energy                        -2.8122864143 
+   Correlation energy NL                      0.0000000000 
+   Exchange-Correlation energy              -51.7849143014 
+   Embedding correction                       0.0000000000 
+   Total DFT Energy (No VdW correction)    -500.2706819822 
+# -----------------------------------------------------------
+$ Solvation_Details
+   description: Details concerning solvation
+   geom. index: 1
+   prop. index: 1
+     Epsilon:                7.2500000000
+     Refrac:                 1.4070000000
+     RSolv:                  1.3000000000
+     Surface Type:                      2
+     Number of Points:               1158
+     Surface Area:         704.4663172480
+     Dielectric Energy:     -0.0136608799
+# -----------------------------------------------------------
+$ VdW_Correction
+   description: The Van der Waals Correction
+   geom. index: 1
+   prop. index: 1
+        Van der Waals Correction:       -0.0107988901
+# -----------------------------------------------------------
+$ Calculation_Info
+   description: Details of the calculation
+   geom. index: 1
+   prop. index: 1
+     Multiplicity:                          1
+     Charge:                                0
+     number of atoms:                       21
+     number of electrons:                   0
+     number of frozen core electrons:       1
+     number of correlated electrons:        0
+     number of basis functions:             927
+     number of aux C basis functions:       0
+     number of aux J basis functions:       0
+     number of aux JK basis functions:      1009
+     number of aux CABS basis functions:    0
+     Total Energy                           -500.281481
+# -----------------------------------------------------------
+$ SCF_Electric_Properties
+   description: The SCF Calculated Electric Properties
+   geom. index: 1
+   prop. index: 1
+       Filename                          : Keton_sp.scfp 
+       Do Dipole Moment Calculation      : true 
+       Do Quadrupole Moment Calculation  : false 
+       Do Polarizability Calculation     : false 
+** Dipole moment part of electric properties **
+        Magnitude of dipole moment (Debye) :        5.9096997064
+        Electronic Contribution:
+                  0    
+      0       0.690521
+      1       3.354714
+      2       0.003137
+        Nuclear Contribution:
+                  0    
+      0      -1.514710
+      1      -5.528735
+      2      -0.005744
+        Total Dipole moment:
+                  0    
+      0      -0.824188
+      1      -2.174021
+      2      -0.002607
+# -------------------------------------------------------------
+----------------------- !GEOMETRIES! ------------------------
+# -------------------------------------------------------------
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    21 
+    Geometry Index:     1 
+    Coordinates:
+               0 C     -2.917416482025   -0.022077559099    0.222657343933
+               1 C     -2.890243592205   -1.425003508106    0.219337669383
+               2 C     -1.660346702028   -2.088157984529    0.217756339266
+               3 C     -0.463340582906   -1.378997174938    0.219506192994
+               4 C     -0.492043265845    0.026812348296    0.222677654576
+               5 C     -1.719231222205    0.696567332200    0.224199085393
+               6 H     -1.739612330849    1.781704363524    0.226605439460
+               7 H     -3.808866332610   -2.000373812372    0.218014881358
+               8 H     -1.647041180638   -3.174349821879    0.215125074931
+               9 H      0.480040153136   -1.913375591737    0.218243901225
+              10 C      0.761938848577    0.841478614319    0.224068444532
+              11 C      2.093011543779    0.121997517935    0.224875346045
+              12 H      2.178906342512   -0.525770403543    1.104725952878
+              13 H      2.899092732087    0.856700437283    0.228938628603
+              14 H      2.182367262666   -0.519136019826   -0.659575617409
+              15 O      0.712994554485    2.071468767568    0.224399460346
+              16 O     -4.063598210745    0.723691770712    0.224542308494
+              17 C     -5.315018682037    0.013207550477    0.222663067321
+              18 H     -6.084296199046    0.785108963576    0.224284988405
+              19 H     -5.407982680875   -0.611238274124    1.118405540151
+              20 H     -5.407611064228   -0.607107484337   -0.675977203486

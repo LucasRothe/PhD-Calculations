@@ -1,0 +1,70 @@
+#!/bin/zsh
+#PBS -q caesar
+#PBS -S /bin/zsh
+#PBS -l nodes=1:ppn=2
+#PBS -l walltime=8760:00:00
+
+
+setopt EXTENDED_GLOB
+setopt NULL_GLOB
+
+export PATH=$PBS_O_PATH
+
+export RSH_COMMAND="/usr/bin/rsh"
+
+#Setup for helper applications...
+export TURBODIR=/opt/TURBOMOLE
+export PARA_ARCH=MPI
+export TURBOMOLE_SYSNAME=i686-pc-linux-gnu
+export PATH=$TURBODIR/parscripts:$TURBODIR/bin/:$TURBODIR/scripts:$PATH
+
+export g03root=/home/software/cluster
+export GAUSS_EXEDIR=/home/software/cluster/g03
+export GAUSS_SCRDIR=/tmp1/rothe
+export GAUSS_CHKDIR=/tmp1/rothe
+source /home/software/cluster/g03/bsd/g03.profile
+
+
+if [[ ! -d /tmp1/rothe ]] then
+  mkdir -p /tmp1/rothe
+fi
+
+tdir=$(mktemp -d /tmp1/rothe/LiCl_sp__XXXXXX)
+
+foreach node ($(sort -u $PBS_NODEFILE)) { rsh $node "mkdir -p $tdir" }
+#foreach node ($(sort -u $PBS_NODEFILE)) { rcp -r /software/cluster/orca_5_0_2_linux_x86-64_openmpi411 ${node}:$tdir/orca }
+
+export PATH=/software/cluster/orca_5_0_2_linux_x86-64_openmpi411:/software/openmpi-4.1.1/bin:$PATH;
+export LD_LIBRARY_PATH=/software/cluster/orca_5_0_2_linux_x86-64_openmpi411:/software/openmpi-4.1.1/lib64:/software/intel/parallel_studio_xe_2017/compilers_and_libraries_2017.7.259/compilers_and_libraries_2017/linux/compiler/lib/intel64_lin:/software/intel/parallel_studio_xe_2017/mkl/lib/intel64:$LD_LIBRARY_PATH
+
+trap '
+echo "Job terminated from outer space!" >> /home/rothe/Calc/Li_Path/THF/LiCl/LiCl_sp.mpi.2.out 
+cp -v ^(*.(inp|tmp*|*out))  $PBS_O_WORKDIR/ >>& /home/rothe/Calc/Li_Path/THF/LiCl/LiCl_sp.mpi.2.out
+foreach node ($(sort -u $PBS_NODEFILE)) { rsh $node "rm -rf $tdir" }
+exit
+' TERM
+
+
+
+cp $PBS_O_WORKDIR/LiCl_sp.* $tdir/
+
+cd $PBS_O_WORKDIR
+foreach file (  *.pc *.opt *.hess *.bas *.pot *.rno)
+  cp -v $file $tdir/ >>& /home/rothe/Calc/Li_Path/THF/LiCl/LiCl_sp.mpi.2.out
+end
+
+cd $tdir
+
+
+echo "! Job execution by suborca V 5.02 !" > /home/rothe/Calc/Li_Path/THF/LiCl/LiCl_sp.mpi.2.out
+echo "Job started from ${PBS_O_HOST}, running $(which orca) from /software/cluster/orca_5_0_2_linux_x86-64_openmpi411 on $(hostname) in $tdir" >> /home/rothe/Calc/Li_Path/THF/LiCl/LiCl_sp.mpi.2.out
+echo "Going to copy the following really necessary files:  " >> /home/rothe/Calc/Li_Path/THF/LiCl/LiCl_sp.mpi.2.out
+=orca LiCl_sp.inp >>& /home/rothe/Calc/Li_Path/THF/LiCl/LiCl_sp.mpi.2.out
+
+#foreach node ($(sort -u $PBS_NODEFILE)) { rsh $node "rm -rf $tdir/orca" }
+cp -v ^(LiCl_sp.(inp|*tmp*|*out))  $PBS_O_WORKDIR/ >>& /home/rothe/Calc/Li_Path/THF/LiCl/LiCl_sp.mpi.2.out
+
+foreach node ($(sort -u $PBS_NODEFILE)) { rsh $node "rm -rf $tdir" }
+
+
+
