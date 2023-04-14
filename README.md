@@ -11,5 +11,5 @@ Each structure was first modeled using [Avogadro 1.2.0](https://avogadro.cc/)<su
 ## :card_index_dividers: Data Storage
 
 ## :books: Literature
-[1] M. D Hanwell, D. E. Curtis, D. C. Lonie, T. Vandermeersch, E. Zurek, G. R. Hutchison [*Journal of Cheminformatics* **2012**, *4*, 1-17.](https://doi.org/10.1186/1758-2946-4-17)  // doi.org/10.1186/1758-2946-4-17
-[2] C. Bannwarth, S. Ehlert, S. Grimme [*J. Chem. Theory Comput.* **2019**, *15*, 1652–1671.](https://doi.org/10.1021/acs.jctc.8b01176) // doi.org/10.1021/acs.jctc.8b01176
+[1] M. D Hanwell, D. E. Curtis, D. C. Lonie, T. Vandermeersch, E. Zurek, G. R. Hutchison [*Journal of Cheminformatics* **2012**, *4*, 1-17.](https://doi.org/10.1186/1758-2946-4-17)  // doi.org/10.1186/1758-2946-4-17<br>
+[2] C. Bannwarth, S. Ehlert, S. Grimme [*J. Chem. Theory Comput.* **2019**, *15*, 1652–1671.](https://doi.org/10.1021/acs.jctc.8b01176) // doi.org/10.1021/acs.jctc.8b01176<br>
