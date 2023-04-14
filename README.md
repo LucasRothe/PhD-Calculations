@@ -6,7 +6,7 @@ This repository contains all computaion files which were used within my Ph.D. th
 ## :card_index_dividers: Data Storage
 
 ## :recycle: Workflow
-All starting structures were modeled using [Avogadro 1.2.0](https://avogadro.cc/) [^1]
+All starting structures were modeled using [Avogadro 1.2.0](https://avogadro.cc/)<sup>[1]</sup>
 
 
 ## :books: Literature
