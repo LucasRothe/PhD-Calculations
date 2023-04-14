@@ -10,4 +10,4 @@ All starting structures were modeled using [Avogadro 1.2.0](https://avogadro.cc/
 
 
 ## :books: Literature
-[1] M. D Hanwell, D. E. Curtis, D. C. Lonie, T. Vandermeersch, E. Zurek, G. R. Hutchison [*Journal of Cheminformatics* **2012**, *4*, 1-17.](doi.org/10.1186/1758-2946-4-17)  // doi.org/10.1186/1758-2946-4-17
+[1] M. D Hanwell, D. E. Curtis, D. C. Lonie, T. Vandermeersch, E. Zurek, G. R. Hutchison [*Journal of Cheminformatics* **2012**, *4*, 1-17.](www.doi.org/10.1186/1758-2946-4-17)  // doi.org/10.1186/1758-2946-4-17
